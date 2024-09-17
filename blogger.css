@@ -1,0 +1,602 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;1,400&display=swap'); 
+/* this means that the font for the website will be Poppins  imported from google*/
+*{
+    margin: 0;
+    padding: 0;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+/* the asteric class is used to target all elements such as the header when the website is loaded*/
+
+ /* root element */
+ :root{
+--container-color:#1a1e21;
+--second-color:rgba(77, 228, 255);
+--text-color:#172317;
+--bg-color:#fff;
+ }
+
+
+ /* ::selection means that the selected text such as the header will be highlighted */
+ ::selection{
+    color: #fff;
+    background: var(--second-color);
+ }
+ a{
+     text-decoration: none;
+ }
+ li{
+     list-style: none;
+ }
+ img{
+     width: 100%;
+ }
+ section{
+     padding: 3rem 0 2rem;/*  which basically that the section will be 3rem from the top, 0 from the left and 2rem from the bottom */
+ }
+ .container{
+     max-width: 1068px;
+     margin-left: auto;
+     margin-right: auto;
+ }
+ a{
+     text-decoration: none;
+     color: white;
+ }
+ .logoo img{
+    width: 50px;
+    height: 50 px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: -20px;
+    object-position: center;
+    border: 2px solid var(--second-color);
+ }
+/* header */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+   z-index: 200;
+}
+header.shadow{
+    background: #111;
+    box-shadow: 0 1px 4px hsl(0 41% 14% / 10%);
+    transition: s;
+    color: whitesmoke;
+}
+header .shadow a{
+    border-color: var(--text-color);
+    color: var(--text-color);
+}
+header.shadow {
+    color: var(--text-color);
+}
+
+header.shadow .logo {
+    color: white; /* Changes the text color of the logo to white when the header is scrolled */
+}
+header.shadow .logo span{
+    color: white; /* Changes the text color of the logo to white when the header is scrolled */
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: rgb(250, 130, 18);
+    margin-left: -67px; /* Default for larger screens */
+}
+
+.logo span {
+    color: #fff;
+}
+
+/* Responsive adjustments for different screen sizes */
+
+/* Extra small devices (phones, 0px and up) */
+@media only screen and (max-width: 576px) {
+    .logo {
+        font-size: 1.2rem; /* Slightly smaller font size */
+        margin-left: 0; /* Adjust the margin */
+    }
+
+    .logoo img {
+        width: 30px; /* Smaller logo size */
+        height: 30px;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+    .logo {
+        font-size: 1.3rem;
+        margin-left: -30px;
+    }
+
+    .logoo img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .logo {
+        font-size: 1.4rem;
+        margin-left: -50px;
+    }
+
+    .logoo img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .logo {
+        font-size: 1.5rem; /* Original size */
+        margin-left: -67px;
+    }
+
+    .logoo img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* .login{
+    padding: 8px 14px;
+    background: var(--second-color);
+    text-transform: uppercase;
+    border: 1px solid var(--second-color);
+    border-radius: 4px;
+    color: var(--bg-color);
+    font-weight: 500;
+}
+.login:hover{
+    background: transparent;
+}   */
+
+.home{
+    width: 100%;
+    min-height: 440px;
+    background: url("images/container.jpeg") no-repeat;
+    background-size: cover;
+    display: grid;
+    align-items: center;
+    background-position: top;
+    animation: slideBottom 8s ease-in-out forwards; /*  this will make the background image slide down*/
+  }
+  
+  @keyframes slideBottom {
+    from {
+      background-position: bottom;
+    }
+    to {
+      background-position: top;
+    }
+  }
+  .home-text{
+   text-align: center;
+    color: var(--bg-color);
+  }
+  .home-title{
+    font-size: 3.4rem;
+  }
+  .home-subtitle{
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  .about{
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+   display: flex !important; /*  meaning that the display will be set to flex and the !important will make it take precedence as it is more specific than the default display */
+  }
+  .about .contentBx{
+    width: 50%;
+    padding-right: 40px;
+    height: 50%;
+    text-align: left;
+  }
+  .titleText{
+    color: #111;
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  .title-text{
+    color: #111;
+    font-size: 1rem;
+  }
+  .about .imgBx{
+    position: relative;
+    min-width: 50%;
+     width: 50%;
+     height: 50%;
+     /* margin-right: 5px;  */
+     
+
+  }
+
+  .btn2{
+    position: relative;
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 30px;
+    background: #fff;
+    border: 1px solid #111;
+    color: #333;text-decoration: none;
+    transition: .5s;
+  }
+  .btn2:hover{
+    background: #111;
+    color: #fff;
+    border:none ;
+  }
+  .post-filter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1.5rem;
+    margin-top: 1rem !important; 
+  } 
+  .filter-item{
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  .active-filter{
+    background: var(--second-color);
+    color: var(--bg-color);
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+    
+  .post{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+    justify-content: center;
+    gap: 1.5rem;
+    /* margin-top: 20px; */
+  }
+.post-box{
+    background: var(--bg-color);
+   box-shadow: 0 4px 14px hsl(35deg 25% 15% / 10%);  /* this means that the shadow will be 0 padding from the top, 4px padding from the left and 14px padding from the bottom  and */
+    padding: 15px;
+    border-radius: 0.5rem;
+}
+.post-img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center ;
+    border-radius: 0.5rem;
+}
+.category{
+    font-size: 0.9rem;font-weight: 500;text-transform: uppercase;
+    columns: var(--second-color);
+}
+.post-title{
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-color);
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.post-date{
+    display: flex;
+    font-size: 0.76rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-top: 4px;
+}
+.post-description{
+    font-size: 0.9rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    margin: 5px 0 10px;
+    overflow: hidden;
+    line-height: 1.5rem;  
+} 
+.profile{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+}
+.profile-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 2px /* solid var(--second-color); */;
+}
+.profile-name{
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+.footer{
+    background: var(--container-color);
+    text-align: center;
+    background-position: center; /* this means the background will be in the center */
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; this means the background will be fixed as you scrolls */
+}
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 3rem;
+}
+
+.footer .box-container .box:not(:last-child) {
+    border-right: none; /* Remove right border on last item */
+}
+.footer .box-container .box h3{
+    font-size: 1.5rem;
+    color: #fff;
+    padding-bottom: 2rem;
+}
+.footer .box-container .box a{
+    display: block;
+    font-size: 1rem;
+    color: #fff;
+    padding-bottom:1rem ;
+    padding: 1rem 0;
+}
+.footer .box-container .box a i{
+    padding-right: .5rem;
+    color:#fff;
+    font-size: 2rem;
+    font-weight: 600;
+
+}
+.footer .box-container .box a:hover i{
+    padding-right: 2rem;
+}
+.footer .credit{
+    text-align: center;
+    padding-top: 3rem;
+    margin-top: 3rem;
+    border-top: .1rem solid var(--white); /* this means the border will be on the top of the credit */
+    font-size: 1.4rem;
+    color:#fff;
+}
+
+.footer .credit span{
+    color: var(--bg-color);
+    font-weight: 600;
+}
+
+.sci{
+    margin-top: 20px;
+    display: flex;
+}
+.sci li{
+    list-style: none;
+}
+.sci li a{
+display: inline-block;
+width: 40px;
+height: 40px;
+background: #222;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-right: 10px;
+text-decoration: none;
+border-radius: 4px;
+transition: .5s;
+}
+.sci li a:hover{
+    background: rgba(77, 228, 255);
+}
+.sci li a .bx{
+    color: #fff;
+    font-size: 20px;
+}
+.quick-links{
+    position: relative;
+    width: 25%
+}
+.quick-links ul li{
+    list-style: none;
+}
+.quick-links ul li a{
+    color: #999;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+    transition: .3s;
+}
+.quick-links ul li a:hover{
+    color: #fff;
+}
+.footer-container .contactBx{
+    width: calc(35% - 60px);
+}
+.contactBx .info{
+    position: relative;
+}
+.contactBx .info li{
+    display: flex !important;
+    margin: 16px;
+}
+.contactBx .info li span:nth-child(1){
+    color: #fff;
+    font-size: 20px;
+    margin-right: 10px;
+}
+.contactBx .info li span{
+    color: #999;
+}
+.contactBx .info li a{
+    color: #999;
+    text-decoration: none;
+    transition: .5s;
+}
+.contactBx .info li a:hover{
+    color: #fff;
+}
+
+.copyrightText{
+    width: 100%;
+    background: #111;
+}
+@media(max-width: 1060px){
+    .container{
+        margin: 0 auto;
+        width: 95%;
+    }
+  .home-text{
+    width: 100%;
+  }
+    }
+    @media(max-width: 768px){
+        .nav{
+            padding: 10px 0;
+
+        }
+        section{
+            padding: 2rem 0 !important;
+        }
+        .header-content{
+            margin-top: 3rem !important;
+
+        }
+        .home{
+            min-height: 380px;
+        }
+        .home-title{
+            font-size: 3rem;
+        }
+        .header-title{
+            font-size: 2.5rem;
+        }
+        .header-img{
+            width: 380px;
+        }
+        .about{
+            flex-direction: column;
+        }
+        .about .contactBx{
+            min-width:100% ;
+            width: 100%;
+            text-align: center;
+            padding-right:0 ;
+        }
+        .about .contentBx,.about .imgBx{
+            width: 100%;
+        }
+       .about .imgBx{
+           min-height: 300px;
+       }
+       .btn2{
+           margin: 20px auto;
+           display: flex;
+           justify-content: center;
+           /* text-align: center; */
+       }
+       .post-header{
+        height: 435px;
+       }
+       .post-header{
+        margin-top: 9rem !important;
+       }
+    }
+
+
+    @media(max-width: 570px){
+        .nav{
+            padding: 10px 0;
+
+        }
+        .post-header{
+            height: 400px;
+        }
+        .header-title{
+           width: 100%;
+        }
+        .header-img{
+            height:340px;
+        }
+    
+    }
+
+    @media(max-width: 396px){
+        .nav{
+            padding: 10px 0;
+
+        }
+        .home-title{
+            font-size: 2rem;
+        }
+        .home-subtitle{
+            font-size: 1rem;
+        }
+        .home{
+            min-height: 300px;
+        }
+        .post-box{
+          padding: 10px;
+        }
+    
+        .header-title{
+            font-size: 1.5rem;
+        }
+        .header-img{
+            height: 240px;       
+        }
+        .post-header{
+            height: 335px;
+        }
+        .header-img{
+            height: 340px;
+        }
+
+    }
+
+
+
+    /* footer  media query */
+    @media(max-width: 991px){
+        footer{
+            padding: 40px;
+            font-size: 20px;
+        }
+        footer .footer-container{
+            flex-direction: column;
+        }
+        footer .footer-container .sec{
+            margin-right: 0;
+            margin-bottom: 40px;
+        }
+        footer .footer-container .sec.aboutus{
+            width: 100% !important;
+        }
+        .footer-container .quick-links{
+            width: 100%;
+        }
+       footer .footer-container .contactBx{
+            width: 100%;
+        }
+    }
+
+
